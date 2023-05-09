@@ -2,6 +2,7 @@ import torch
 
 ## Train 
 def train(net, epochs, trainloader, optimizer, criterion, device, modelname='test.pth'):
+    net.to(device)
     for epoch in range(epochs):  # loop over the dataset multiple times
 
         running_loss = 0.0
