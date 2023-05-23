@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class LeNet(nn.Module):
-    def __init__(self, in_channels=3, num_classes=10):
+    def __init__(self, in_channels=3, num_classes=10): # img size
         super().__init__()
         self.conv1 = nn.Conv2d(in_channels, 6, 5)
         self.pool = nn.MaxPool2d(2, 2)
